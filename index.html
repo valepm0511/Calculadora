@@ -12,34 +12,34 @@
 
 <body>
     <!-- contenedor -->
-    <div class="calculator-container">
+    <div class="calculator-container" id="calculator">
         <div class="calculator-display">
-            <span class="calculator-output">0</span>
+            <span class="calculator-output" id="calculator-output">0</span>
         </div>
         <div class="calculator-keyboard">
             <div class="calculator-row d-flex justify-content-between">
-                <button class="calculator-key number">7</button>
-                <button class="calculator-key number">8</button>
-                <button class="calculator-key number">9</button>
-                <button class="calculator-key operator">/</button>
+                <button data-type="number" data-value="7" class="calculator-key number">7</button>
+                <button data-type="number" data-value="8" class="calculator-key number">8</button>
+                <button data-type="number" data-value="9" class="calculator-key number">9</button>
+                <button data-type="operator" data-value="/" class="calculator-key operator">/</button>
             </div>
             <div class="calculator-row d-flex justify-content-between">
-                <button class="calculator-key number">4</button>
-                <button class="calculator-key number">5</button>
-                <button class="calculator-key number">6</button>
-                <button class="calculator-key operator">X</button>
+                <button data-type="number" data-value="4" class="calculator-key number">4</button>
+                <button data-type="number" data-value="5" class="calculator-key number">5</button>
+                <button data-type="number" data-value="6" class="calculator-key number">6</button>
+                <button data-type="operator" data-value="X" class="calculator-key operator">X</button>
             </div>
             <div class="calculator-row d-flex justify-content-between">
-                <button class="calculator-key number">1</button>
-                <button class="calculator-key number">2</button>
-                <button class="calculator-key number">3</button>
-                <button class="calculator-key operator">-</button>
+                <button data-type="number" data-value="1" class="calculator-key number">1</button>
+                <button data-type="number" data-value="2" class="calculator-key number">2</button>
+                <button data-type="number" data-value="3" class="calculator-key number">3</button>
+                <button data-type="operator" data-value="-" class="calculator-key operator">-</button>
             </div>
             <div class="calculator- d-flex justify-content-between">
-                <button class="calculator-key number">0</button>
-                <button class="calculator-key operator">C</button>
-                <button class="calculator-key operator">=</button>
-                <button class="calculator-key operator">+</button>
+                <button data-type="number" data-value="0" class="calculator-key number">0</button>
+                <button data-type="action" data-value="C" class="calculator-key operator">C</button>
+                <button data-type="action" data-value="=" class="calculator-key operator">=</button>
+                <button data-type="operator" data-value="+" class="calculator-key operator">+</button>
             </div>
         </div>
     </div>
