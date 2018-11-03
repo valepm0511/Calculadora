@@ -25,33 +25,43 @@ let init = () => {
     // eventos de numeros
 
     uno.onclick = (e) => {
+        clear();
         output.textContent = output.textContent + '1';
     }
     dos.onclick = (e) => {
+        clear();
         output.textContent = output.textContent + '2';
     }
     tres.onclick = (e) => {
+        clear();
         output.textContent = output.textContent + '3';
     }
     cuatro.onclick = (e) => {
+        clear();
         output.textContent = output.textContent + '4';
     }
     cinco.onclick = (e) => {
+        clear();
         output.textContent = output.textContent + '5';
     }
     seis.onclick = (e) => {
+        clear();
         output.textContent = output.textContent + '6';
     }
     siete.onclick = (e) => {
+        clear();
         output.textContent = output.textContent + '7';
     }
     ocho.onclick = (e) => {
+        clear();
         output.textContent = output.textContent + '8';
     }
     nueve.onclick = (e) => {
+        clear();
         output.textContent = output.textContent + '9';
     }
     cero.onclick = (e) => {
+        clear();
         output.textContent = output.textContent + '0';
     }
 
@@ -65,21 +75,29 @@ let init = () => {
         operatorA = output.textContent;
         operator = '+';
         clear();
+        output.textContent = '+';
+
     }
+
     restar.onclick = (e) => {
         operatorA = output.textContent;
         operator = '-';
         clear();
+        output.textContent = '-';
     }
+
     dividir.onclick = (e) => {
         operatorA = output.textContent;
         operator = '/';
         clear();
+        output.textContent = '/';
     }
+
     multiplicar.onclick = (e) => {
         operatorA = output.textContent;
         operator = '*';
         clear();
+        output.textContent = '*';
     }
 
     igual.onclick = (e) => {
@@ -93,6 +111,7 @@ let clear = () => {
     output.textContent = "";
 }
 
+
 let toReset = () => {
     output.textContent = "";
     operatorA = 0;
@@ -105,6 +124,7 @@ let result = () => {
     switch (operator) {
         case '+':
             res = parseFloat(operatorA) + parseFloat(operatorB);
+            console.log(res);
             break;
         case '-':
             res = parseFloat(operatorA) - parseFloat(operatorB);
