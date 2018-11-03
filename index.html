@@ -10,44 +10,44 @@
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 
-<body>
+<body onload="init();">
     <!-- contenedor -->
     <div class="calculator-container" id="calculator">
         <div class="calculator-display">
-            <span class="calculator-output" id="calculator-output">0</span>
+            <span class="calculator-output" id="output"></span>
         </div>
         <div class="calculator-keyboard">
             <div class="calculator-row d-flex justify-content-between">
-                <button data-type="number" data-value="7" class="calculator-key number">7</button>
-                <button data-type="number" data-value="8" class="calculator-key number">8</button>
-                <button data-type="number" data-value="9" class="calculator-key number">9</button>
-                <button data-type="operator" data-value="/" class="calculator-key operator">/</button>
+                <button class="calculator-key number" id="siete">7</button>
+                <button class="calculator-key number" id="ocho">8</button>
+                <button class="calculator-key number" id="nueve">9</button>
+                <button class="calculator-key operator" id="division">/</button>
             </div>
             <div class="calculator-row d-flex justify-content-between">
-                <button data-type="number" data-value="4" class="calculator-key number">4</button>
-                <button data-type="number" data-value="5" class="calculator-key number">5</button>
-                <button data-type="number" data-value="6" class="calculator-key number">6</button>
-                <button data-type="operator" data-value="X" class="calculator-key operator">X</button>
+                <button class="calculator-key number" id="cuatro">4</button>
+                <button class="calculator-key number" id="cinco">5</button>
+                <button class="calculator-key number" id="seis">6</button>
+                <button class="calculator-key operator" id="multiplicacion">X</button>
             </div>
-            <div class="calculator-row d-flex justify-content-between">
-                <button data-type="number" data-value="1" class="calculator-key number">1</button>
-                <button data-type="number" data-value="2" class="calculator-key number">2</button>
-                <button data-type="number" data-value="3" class="calculator-key number">3</button>
-                <button data-type="operator" data-value="-" class="calculator-key operator">-</button>
+            <div class="calculator-row d-flex justify-content-between ">
+                <button class="calculator-key number" id="uno">1</button>
+                <button class="calculator-key number" id="dos">2</button>
+                <button class="calculator-key number" id="tres">3</button>
+                <button class="calculator-key operator" id="resta">-</button>
             </div>
-            <div class="calculator- d-flex justify-content-between">
-                <button data-type="number" data-value="0" class="calculator-key number">0</button>
-                <button data-type="action" data-value="C" class="calculator-key operator">C</button>
-                <button data-type="action" data-value="=" class="calculator-key operator">=</button>
-                <button data-type="operator" data-value="+" class="calculator-key operator">+</button>
+            <div class="calculator- d-flex justify-content-between ">
+                <button class="calculator-key number" id="cero">0</button>
+                <button class="calculator-key operator" id="reset">C</button>
+                <button class="calculator-key operator" id="igual">=</button>
+                <button class="calculator-key operator" id="suma">+</button>
             </div>
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script src="src/js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js "></script>
+    <script src="src/js/app.js "></script>
 </body>
 
 </html>

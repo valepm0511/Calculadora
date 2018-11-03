@@ -1,18 +1,121 @@
-let calculator = document.getElementById('calculator');
-let output = document.getElementById('calculator-output');
+let operatorA;
+let operatorB;
+let operator;
 
-calculator.addEventListener('click', calculatorClick);
+let init = () => {
+    // variables
+    let output = document.getElementById('output');
+    let uno = document.getElementById('uno');
+    let dos = document.getElementById('dos');
+    let tres = document.getElementById('tres');
+    let cuatro = document.getElementById('cuatro');
+    let cinco = document.getElementById('cinco');
+    let seis = document.getElementById('seis');
+    let siete = document.getElementById('siete');
+    let ocho = document.getElementById('ocho');
+    let nueve = document.getElementById('nueve');
+    let cero = document.getElementById('cero');
+    let sumar = document.getElementById('suma');
+    let restar = document.getElementById('resta');
+    let multiplicar = document.getElementById('multiplicacion');
+    let dividir = document.getElementById('division');
+    let reset = document.getElementById('reset');
+    let igual = document.getElementById('igual');
 
-function calculatorClick(event) {
-    let target = event.target;
-    let dataset = target.dataset;
-    let value = dataset.value;
-    let type = dataset.type;
-    // console.log(dataset);
-    if (type) {
-        console.log(dataset);
-        if (type === "number") {
-            output.innerHTML = value;
-        }
+    // eventos de numeros
+
+    uno.onclick = (e) => {
+        output.textContent = output.textContent + '1';
     }
+    dos.onclick = (e) => {
+        output.textContent = output.textContent + '2';
+    }
+    tres.onclick = (e) => {
+        output.textContent = output.textContent + '3';
+    }
+    cuatro.onclick = (e) => {
+        output.textContent = output.textContent + '4';
+    }
+    cinco.onclick = (e) => {
+        output.textContent = output.textContent + '5';
+    }
+    seis.onclick = (e) => {
+        output.textContent = output.textContent + '6';
+    }
+    siete.onclick = (e) => {
+        output.textContent = output.textContent + '7';
+    }
+    ocho.onclick = (e) => {
+        output.textContent = output.textContent + '8';
+    }
+    nueve.onclick = (e) => {
+        output.textContent = output.textContent + '9';
+    }
+    cero.onclick = (e) => {
+        output.textContent = output.textContent + '0';
+    }
+
+    // eventos de operadores
+
+    reset.onclick = (e) => {
+        toReset();
+    }
+
+    sumar.onclick = (e) => {
+        operatorA = output.textContent;
+        operator = '+';
+        clear();
+    }
+    restar.onclick = (e) => {
+        operatorA = output.textContent;
+        operator = '-';
+        clear();
+    }
+    dividir.onclick = (e) => {
+        operatorA = output.textContent;
+        operator = '/';
+        clear();
+    }
+    multiplicar.onclick = (e) => {
+        operatorA = output.textContent;
+        operator = '*';
+        clear();
+    }
+
+    igual.onclick = (e) => {
+        operatorB = output.textContent;
+        result();
+    }
+
+}
+
+let clear = () => {
+    output.textContent = "";
+}
+
+let toReset = () => {
+    output.textContent = "";
+    operatorA = 0;
+    operatorB = 0;
+    operator = "";
+}
+
+let result = () => {
+    let res = 0;
+    switch (operator) {
+        case '+':
+            res = parseFloat(operatorA) + parseFloat(operatorB);
+            break;
+        case '-':
+            res = parseFloat(operatorA) - parseFloat(operatorB);
+            break;
+        case '/':
+            res = parseFloat(operatorA) / parseFloat(operatorB);
+            break;
+        case '*':
+            res = parseFloat(operatorA) * parseFloat(operatorB);
+            break;
+    }
+    toReset();
+    output.textContent = res;
 }
